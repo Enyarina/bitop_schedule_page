@@ -137,7 +137,7 @@ header .row, section .row {
     flex-direction: column;
 }
 
-.main-text__downloading_schedules__icons{
+.main-text__downloading_schedules__icons {
     width: 40vh;
 }
 
@@ -160,12 +160,16 @@ header .row, section .row {
     border-radius: 50%;
 }
 
-.main-text__downloading_schedules__icon:hover{
+.main-text__downloading_schedules__icon:hover {
     background: var(--cornflower-blue-pure);
 }
 
-.main-text__downloading_schedules__icon:hover svg{
+.main-text__downloading_schedules__icon:hover svg {
     color: white;
+}
+
+.main-text__downloading_schedules__link {
+    text-decoration: none;
 }
 
 .main-text__site {
@@ -212,18 +216,65 @@ header .row, section .row {
 }
 
 #phones-phone__1 {
-    height: 48vw;
-    bottom: 1vw;
-    left: 5vw;
+    height: 39vw;
+    bottom: 11.5vw;
+    left: 6.5vw;
 }
 
 #phones-phone__2 {
-    height: 50vw;
-    bottom: 1.5vw;
-    left: 23vw;
+    height: 41vw;
+    bottom: 12vw;
+    left: 24.5vw;
 }
 
 /* /Phones */
+
+/*Qr code*/
+#qrcode-modal__wrapper {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .33);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    z-index: -1;
+    transition-duration: .25s;
+}
+
+#qrcode-modal__wrapper.open {
+    opacity: 1;
+    z-index: 10000;
+}
+
+#qrcode-modal {
+    background-color: white;
+    width: 100vw;
+    max-width: 350px;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+#qrcode-modal_close {
+    justify-content: flex-end;
+    display: flex;
+}
+
+#qrcode-modal_close_link {
+    text-decoration: none;
+    width: 40px;
+}
+
+#qrcode_img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/*Qr code*/
 
 /* Mobile devices */
 @media all and (max-width: 767px) {
@@ -258,14 +309,14 @@ header .row, section .row {
 
     #phones-phone__1 {
         left: 17vw;
-        bottom: 10vw;
-        height: 96vw;
+        bottom: 40vw;
+        height: 79vw;
     }
 
     #phones-phone__2 {
         left: 53vw;
-        bottom: 15vw;
-        height: 100vw;
+        bottom: 45vw;
+        height: 82vw;
     }
 
     .main-text__arrow {
@@ -285,7 +336,7 @@ header .row, section .row {
 
 @media all and (max-width: 575px) and (max-height: 767px) {
     #phones {
-        margin-bottom: -62vw;
+        margin-bottom: -75vw;
     }
 }
 
